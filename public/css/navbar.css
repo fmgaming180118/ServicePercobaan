@@ -1,0 +1,141 @@
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    background-color: #6c757d;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    background-image: url('/gambar/sidebar.png'); /* Menggunakan jalur relatif */
+    background-size: cover; /* Pastikan gambar menutupi seluruh sidebar */
+    background-position: center; /* Posisi gambar agar tetap di tengah */
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Menambahkan animasi pada perubahan warna */
+}
+
+.sidebar a:hover {
+    background-color: #5a6268;
+}
+
+.sidebar a.active {
+    background-color: #343a40;
+}
+
+.header {
+    background-image: url('/gambar/bg_topbar.png'); /* Menggunakan jalur relatif */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 200px; /* Sesuaikan dengan lebar sidebar */
+    right: 0;
+    z-index: 999;
+    background-size: cover; /* Pastikan gambar menutupi header */
+    background-position: center; /* Gambar tetap terpusat */
+    color: white; /* Menetapkan warna teks agar kontras dengan latar belakang */
+}
+
+.header .d-flex span {
+    margin-right: 15px; /* Memberikan jarak antara nama dan ikon */
+}
+
+.header .d-flex i {
+    margin-left: 15px; /* Memberikan jarak kiri pada ikon logout */
+}
+
+.content {
+    padding: 20px;
+    margin-top: 60px; /* Memberikan ruang agar tidak tertutup header */
+    margin-left: 0px; /* Memberikan ruang lebih untuk konten agar tidak tertutup sidebar */
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Memastikan tinggi card sama */
+    margin-bottom: 20px; /* Memberikan jarak antara card */
+}
+
+.card-body {
+    overflow: auto;
+    height: 300px;  /* Sesuaikan dengan kebutuhan Anda */
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card .btn {
+    border-radius: 20px;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+}
+
+.scrollable-card {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Flexbox untuk mengatur card dalam satu kolom, satu di atas dan satu di bawah */
+.card-container {
+    display: flex;
+    flex-direction: column; /* Menyusun card secara vertikal */
+    gap: 20px; /* Memberikan jarak antar card */
+    align-items: center; /* Menjaga card tetap rata di tengah */
+    max-width: 600px; /* Memastikan lebar maksimal card agar tidak terlalu besar */
+    margin: 0 auto; /* Menjaga agar card tetap berada di tengah */
+}
+
+/* Menyusun card dengan ukuran tetap */
+.card {
+    width: 100%; /* Agar card mengisi lebar kontainer */
+    height: 300px; /* Menjaga ukuran card tetap konsisten */
+}
+
+.user-name {
+    font-size: 24px;  /* Menyesuaikan ukuran font */
+    font-weight: bold; /* Membuat font lebih tebal */
+    text-transform: uppercase; /* Mengubah nama menjadi huruf kapital */
+}
+
+
+/* Menyesuaikan lebar card untuk mobile */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Menyusun card secara vertikal pada layar kecil */
+    }
+    .card {
+        width: 100%; /* Card memenuhi lebar kontainer */
+    }
+}
+
+.h1{
+    color: black;
+}
+
+.move-up {
+    margin-top: -800px; /* Sesuaikan dengan nilai yang sesuai */
+}
+
+
+

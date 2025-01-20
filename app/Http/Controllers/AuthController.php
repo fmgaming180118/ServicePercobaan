@@ -7,9 +7,11 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-// Fungsi pada AuthController
+// Fungsi pada AuthControlle
+// auth
 class AuthController extends Controller
 {
+
     public function login(Request $request)
     {
         $validated = $request->validate([
